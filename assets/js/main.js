@@ -235,4 +235,4 @@
         console.log(error);
       })
   }
-  document.querySelector(".sendMessage").addEventListener("click", sendEmail);
+  document.querySelector(".sendMessage").addEventListener("click", sendEmail)

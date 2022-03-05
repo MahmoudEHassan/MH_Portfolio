@@ -8,6 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahmoud Hassan Portfolio</title>
 
+    <!-- emailJs for sending Message -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+        (function() {
+        emailjs.init("C04-vqf3MJMvHTUar");
+        })();
+  </script>
+
   <!-- Windows Icon -->
   <link href="assets/img/windows-icon.png" rel="icon">
 
@@ -23,14 +31,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- emailJs for sending Message -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function() {
-      emailjs.init("C04-vqf3MJMvHTUar");
-      })();
-  </script>
 
 </head>
 
@@ -512,7 +512,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div onclick="sendEmail()" class="text-center sendMessage"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" class="sendMessage" >Send Message</button></div>
             </form>
           </div>
 
