@@ -219,5 +219,21 @@
   });
 
 })()
+
  /**
+   * Send Email 
    */
+
+function sendEmail(para){
+  var tempParams ={
+    from_name: document.getElementById("from_name").value,
+    to_name: ("Ninja"),
+    message: document.getElementById("from_name").value
+
+
+  };
+  emailjs.send('gamil','template_20a5v85', tempParams)
+  .then(function(info){
+    console.log("mail send wooooooow",info.status);
+  })
+}
