@@ -476,7 +476,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="https://formsubmit.co/el/duloti" method="POST">
+            <form onsubmit="sendEmail()" method="post" role="form" class="js-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -534,6 +534,7 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script src="assets/js/main.js"></script>
 
