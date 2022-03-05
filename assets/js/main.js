@@ -223,17 +223,16 @@
  /**
    * Send Email 
    */
-
-function sendEmail(para){
-  var tempParams ={
-    from_name: document.getElementById("from_name").value,
-    to_name: ("Ninja"),
-    message: document.getElementById("from_name").value
-
-
-  };
-  emailjs.send('gamil','template_20a5v85', tempParams)
-  .then(function(info){
-    console.log("mail send wooooooow",info.status);
-  })
-}
+  function sendEmail(){
+    emailjs.send("service_pphvw3c","template_20a5v85",{
+      subject: document.querySelector("#subject").value,
+      from_name: document.querySelector("#from_name").value,
+      email: document.querySelector("#email").value,
+      message: document.querySelector("#message").value,
+      }).then(response => {
+        console.log("Message Sent", response.status);
+      }, (error) => {
+        console.log(error);
+      })
+  }
+  document.querySelector(".sendMessage").addEventListener("click", sendEmail);
