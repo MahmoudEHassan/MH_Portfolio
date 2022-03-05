@@ -221,18 +221,23 @@
 })()
 
  /**
-   * Send Email 
+   * Send Email Using (emailJS)
    */
-  function sendEmail(){
-    emailjs.send("service_pphvw3c","template_20a5v85",{
-      subject: document.querySelector("#subject").value,
-      from_name: document.querySelector("#from_name").value,
-      email: document.querySelector("#email").value,
-      message: document.querySelector("#message").value,
-      }).then(response => {
-        console.log("Message Sent", response.status);
-      }, (error) => {
-        console.log(error);
-      })
-  }
-  document.querySelector(".sendMessage").addEventListener("click", sendEmail)
+
+function sendEmail() {
+  let fullName = document.getElementById("fullname").value;
+  let email = document.getElementById("email").value;
+  let subject = document.getElementById("subject").value;
+  let message = document.getElementById("message").value;
+
+  var Params = {
+    from_name: fullName,
+    email: email,
+    subject: subject,
+    message: message,
+  };
+
+  emailjs.send('service_pphvw3c', 'template_20a5v85', Params).then(function (res) {
+    console.log(res);
+  });
+};
